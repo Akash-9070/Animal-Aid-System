@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ config['APPLICATION_TITLE'] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        </div>
+        <div class="website-name">Animal Aid System</div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('models') }}">Models</a></li> <!-- New Models button -->
+
+        </ul>
+    </nav>
+
+
+    <!-- Pop-up HTML -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <div class="popup-header">
+            <img src="{{ url_for('static', filename='popup_logo.png') }}" alt="Logo" class="popup-logo">
+            <h2>Injured Animal Detected </h2>
+        </div>
+        <p>An injured dog has been detected by the surveillance system. Please make urgent calls to 2-3 nearby NGOs for immediate rescue.</p>
+        <div class="ngos">
+            <p>NGO Contacts:</p>
+            <ul>
+                <li>NGO 1:<a href="tel:+1234567890">123-456-7890</a></li>
+                <li>NGO 2:<a href="tel:+1987654321">987-654-3210</a></li>
+                <li>NGO 3:<a href="tel:+1122334455">112-233-4455</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+    <div class="container">
+        {% if show_camera %}
+        <div class="camera">
+            <video id="video" autoplay></video>
+        </div>
+        {% endif %}
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    {% if show_camera %}
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,388 @@
+/* Basic styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Google Fonts for a modern look */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('/static/background.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-attachment: fixed;
+    background-position: center; /* Center the background image */
+        }
+
+
+        .overview-text {
+            font-size: 24px; /* Adjust font size as needed */
+        }
+
+        .models-page {
+            color: white;
+        }
+
+        .model-heading {
+            font-size: 35px; /* Font size for model headings */
+            margin-bottom: 10px; /* Bottom margin for model headings */
+        }
+        
+        .model-details {
+            font-size: 25px; /* Font size for model details (accuracy and losses) */
+            margin-bottom: 20px; /* Bottom margin for model details */
+        }
+
+
+
+        .pdf-container {
+            margin-bottom: 40px;
+        }
+        
+        .pdf-container h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        iframe {
+            border: none; /* Removes iframe border */
+            width: 1600px; /* Ensures iframe fills container */
+            height: 800px; /* Adjust height as needed for PDF viewer */
+        }
+        
+        
+        
+        nav {
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        
+        .nav-logo img {
+            height: 90px; /* Adjust the height as needed */
+            margin-right: 20px;
+        }
+        
+        .website-name {
+            font-size: 30px;
+            font-weight: bold;
+            flex-grow: 1;
+        }
+        
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links li a {
+        font-size: 25px;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        .nav-links li a:hover {
+            background-color: #111;
+        }
+        
+          /* Pop-up styling */
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Adjust width as needed */
+            max-width: 600px; /* Maximum width */
+            height: 50%; /* Adjust height as needed */
+            max-height: 80%; /* Maximum height */
+            overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .ngo-list {
+            list-style-type: none; /* Remove default bullet style */
+            padding: 0; /* Remove default padding */
+        }
+
+
+        .popup-message {
+            font-size: 30px; /* Adjust font size */
+            line-height: 1.6; /* Adjust line height for better readability */
+            margin-bottom: 20px; /* Optional: Add margin to separate from other content */
+        }
+
+
+        .popup-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .popup-logo {
+            height: 200px; /* Increase or decrease as needed */
+            width: auto; /* Maintain aspect ratio */
+            margin-right: 10px;
+        }
+
+
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+                }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+        .popup-content h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .popup-content p {
+            color: #666;
+            font-size: 16px;
+        }
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 20px 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .camera {
+            flex: 7;
+            max-width: 100%;
+            aspect-ratio: 16 / 9;
+            width: 10px;
+            height: auto;
+        }
+
+        .camera iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        .text {
+            flex: 4;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            max-width: 100%;
+            padding: 30px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 30px 10px;
+            }
+
+            .camera, .text {
+                max-width: 100%;
+            }
+        }
+        
+        
+        .contact-grid {
+            display: flex;
+            gap: 20px;
+            width: 75%; /* Adjust width as needed */
+
+        }
+        
+        .contact-info {
+        font-size: 28px; /* Adjust heading font size */
+
+            flex: 3;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info p {
+        font-size: 28px; /* Adjust heading font size */
+
+            margin: 10px 0;
+        }
+        
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .map {
+            flex: 2.5;
+            height: 500px;
+            width: 500px; /* Adjust the height as needed */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+          /* Add this to your existing CSS file */
+        .nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px; /* Adjust this size as needed */
+}
+
+        .nav-links li a:hover {
+    background-color: #111;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    max-width: 80%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.popup button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#callNGO {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#closePopup {
+    background-color: #f44336;
+    color: white;
+}
+
+.call-button {
+    display: block;
+    width: calc(100% - 40px);
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.call-button:hover {
+    background-color: #0056b3;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+        
+          /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            .container, .contact-grid {
+                flex-direction: column; /* Stack items vertically on smaller screens */
+            }
+            .camera,
+            .text,
+            .contact-info,
+            .map {
+                width: 100%; /* Take full width on smaller screens */
+                margin: 0; /* Remove margin for stacked layout */
+            }
+        }
+        
+
+        /* Custom fonts and styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}

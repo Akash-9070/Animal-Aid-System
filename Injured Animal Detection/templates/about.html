@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<style>
+            /* Specific styles for about.html */
+            h1, h2, h3, h4, h5, h6, p ,ul {
+                color: white;
+            }
+</style>
+<h1>About Us</h1>
+<p style="font-size: 24px;">Welcome to the Animal Aid System. Our mission is to utilize advanced technology to monitor and assess potential injuries in animals, specifically focusing on street dogs. We compile thousands of images to create a robust training dataset for deep learning models. Our system detects signs of distress or injury and triggers alerts to NGOs for prompt intervention and care.</p>
+
+<h2 style="font-size: 30px;">Project Documentation</h2>
+<p style="font-size: 24px;">For more details, you can download our project documentation:</p>
+<iframe src="https://docs.google.com/document/d/1o-QEO0coCDqStgwp7fxAsISAduc8PQz5/edit?usp=sharing&ouid=106682059828150623126&rtpof=true&sd=true" style="width:100%; height:600px;" frameborder="0"></iframe>
+<h2 style="font-size: 30px;">Project Summary</h2>
+<p>Here's a brief summary of our project:</p>
+<ul>
+    <li style="font-size: 24px;">Objective: Monitor and assess injuries in street animals using advanced technology.</li>
+    <li style="font-size: 24px;">Methodology: Compilation of images for training deep learning models.</li>
+    <li style="font-size: 24px;">Impact: Prompt alerts to NGOs for timely intervention and care.</li>
+</ul>
+{% endblock %}
