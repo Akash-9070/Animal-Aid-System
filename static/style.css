@@ -1,0 +1,323 @@
+/* Basic styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('/static/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.nav-logo img {
+    height: 90px;
+    margin-right: 20px;
+}
+
+.website-name {
+    font-size: 30px;
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    font-size: 18px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    background-color: #111;
+}
+
+/* Container layout */
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Home page */
+.camera {
+    flex: 8;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    width: 10px;
+    height: auto;
+}
+
+.camera iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.text {
+    flex: 3;
+    background-color: white; /* White background as requested */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    max-width: 100%;
+    padding: 30px;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+/* Models page */
+.models-page {
+    color: white;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.overview-text {
+    font-size: 24px;
+}
+
+.model-heading {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.model-details {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.pdf-container {
+    margin-bottom: 40px;
+    width: 270%; /* Increased width as requested */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pdf-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 800px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Contact page */
+.contact-grid {
+    display: flex;
+    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.contact-info {
+    font-size: 28px;
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-info p {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.map {
+    flex: 1;
+    width: 500px; /* Fixed width */
+    height: 500px; /* Same as width to create a square */
+    max-width: 100%; /* Ensures it doesn't overflow on smaller screens */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    overflow: hidden; /* Ensures the map doesn't overflow the container */
+}
+
+/* Pop-up styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    max-width: 80%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    height: 50%;
+    max-height: 80%;
+    overflow-y: auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.popup-message {
+    font-size: 30px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.popup-logo {
+    height: 200px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.popup-content p {
+    color: #666;
+    font-size: 16px;
+}
+
+.popup button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#callNGO {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#closePopup {
+    background-color: #f44336;
+    color: white;
+}
+
+.call-button {
+    display: block;
+    width: calc(100% - 40px);
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.call-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .container, .contact-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .camera, .text, .contact-info, .map {
+        width: 95%;
+        max-width: 800px;
+        margin-bottom: 20px;
+    }
+
+    iframe {
+        height: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        flex-direction: column;
+    }
+    .contact-info,
+    .map {
+        width: 100%;
+        max-width: 400px; /* Limit maximum width on smaller screens */
+        margin: 0 auto 20px;
+    }
+    .map {
+        height: 300px; /* Slightly smaller on mobile devices */
+    }
+}
+
+/* Custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');

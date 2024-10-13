@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Models{% endblock %}
+
+{% block content %}
+<div class="models-page">
+    <h1>Models</h1>
+    <p class="overview-text">Overview of the models used in the project.</p>
+
+
+    <div class="pdf-container">
+        <h2 class="model-heading">Model 1</h2>
+        <p  class="model-details">Accuracy: 95.90%<br>Val-Accuracy: 85.79%</p>
+        <iframe src="{{ url_for('static', filename='Model1.pdf') }}" width="1000" height="500px"></iframe>
+    </div>
+
+    <div class="pdf-container">
+        <h2 class="model-heading">Model 2</h2>
+        <p class="model-details">Accuracy: 97.80%<br>Val-Accuracy: 77.56%</p>
+        <iframe src="{{ url_for('static', filename='Model2.pdf') }}" width="1000" height="500px"></iframe>
+    </div>
+
+    <!-- Add more models as needed -->
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+
+<div id="popup" class="popup">
+    <span class="close">&times;</span>
+    <p>An injured dog has been detected! Would you like to contact the nearest NGO for rescue?</p>
+    <button id="callNGO">Call NGO</button>
+    <button id="closePopup">Close</button>
+    <button id="callButton" class="call-button">Call</button>
+</div>
+
+<!--<div class="container">
+    <div class="camera">
+        <video id="video" controls autoplay muted>
+            <source src="{{ url_for('static', filename='/media/final_.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div> -->
+    <div class="container">
+        <div class="camera">
+            <iframe id="youtube-video" width="100" height="100" src="https://www.youtube.com/embed/VDutmLny4Xo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    <div class="text">
+        <h1>Welcome to the Project Demonstration</h1>
+        <p>Our project leverages advanced deep learning models to accurately detect and assess potential injuries in dogs. Given the absence of suitable existing datasets, we undertook the initiative to compile thousands of images of injured dogs ourselves to create a robust training dataset. By analyzing various visual cues and patterns, our system can swiftly identify signs of distress or injury. In case of detection, the system automatically triggers alerts to the nearest NGOs with a voice message and the CCTV camera location, facilitating prompt intervention and care. This model is designed to be deployed in CCTV cameras for the surveillance of street dog injuries, blending cutting-edge technology with a commitment to animal welfare and community service.</p>
+    </div>
+</div>
+{% endblock %}
